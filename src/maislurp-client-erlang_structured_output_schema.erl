@@ -1,0 +1,77 @@
+-module(maislurp-client-erlang_structured_output_schema).
+
+-export([encode/1]).
+
+-export_type([maislurp-client-erlang_structured_output_schema/0]).
+
+-type maislurp-client-erlang_structured_output_schema() ::
+    #{ 'anyOf' => list(),
+       'default' => maps:map(),
+       'description' => binary(),
+       'enumValues' => list(),
+       'example' => maps:map(),
+       'format' => binary(),
+       'items' => maislurp-client-erlang_structured_output_schema:maislurp-client-erlang_structured_output_schema(),
+       'maxItems' => integer(),
+       'minItems' => integer(),
+       'maxLength' => integer(),
+       'minLength' => integer(),
+       'pattern' => binary(),
+       'properties' => maps:map(),
+       'propertyOrdering' => list(),
+       'required' => list(),
+       'maxProperties' => integer(),
+       'minProperties' => integer(),
+       'maximum' => integer(),
+       'minimum' => integer(),
+       'nullable' => boolean(),
+       'title' => binary(),
+       'type' => binary()
+     }.
+
+encode(#{ 'anyOf' := AnyOf,
+          'default' := Default,
+          'description' := Description,
+          'enumValues' := EnumValues,
+          'example' := Example,
+          'format' := Format,
+          'items' := Items,
+          'maxItems' := MaxItems,
+          'minItems' := MinItems,
+          'maxLength' := MaxLength,
+          'minLength' := MinLength,
+          'pattern' := Pattern,
+          'properties' := Properties,
+          'propertyOrdering' := PropertyOrdering,
+          'required' := Required,
+          'maxProperties' := MaxProperties,
+          'minProperties' := MinProperties,
+          'maximum' := Maximum,
+          'minimum' := Minimum,
+          'nullable' := Nullable,
+          'title' := Title,
+          'type' := Type
+        }) ->
+    #{ 'anyOf' => AnyOf,
+       'default' => Default,
+       'description' => Description,
+       'enumValues' => EnumValues,
+       'example' => Example,
+       'format' => Format,
+       'items' => Items,
+       'maxItems' => MaxItems,
+       'minItems' => MinItems,
+       'maxLength' => MaxLength,
+       'minLength' => MinLength,
+       'pattern' => Pattern,
+       'properties' => Properties,
+       'propertyOrdering' => PropertyOrdering,
+       'required' => Required,
+       'maxProperties' => MaxProperties,
+       'minProperties' => MinProperties,
+       'maximum' => Maximum,
+       'minimum' => Minimum,
+       'nullable' => Nullable,
+       'title' => Title,
+       'type' => Type
+     }.
