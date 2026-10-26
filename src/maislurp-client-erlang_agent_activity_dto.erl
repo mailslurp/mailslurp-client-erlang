@@ -1,0 +1,77 @@
+-module(maislurp-client-erlang_agent_activity_dto).
+
+-export([encode/1]).
+
+-export_type([maislurp-client-erlang_agent_activity_dto/0]).
+
+-type maislurp-client-erlang_agent_activity_dto() ::
+    #{ 'id' := maislurp-client-erlang_u_uid:maislurp-client-erlang_u_uid(),
+       'userId' := maislurp-client-erlang_u_uid:maislurp-client-erlang_u_uid(),
+       'apiKeyEntityId' => maislurp-client-erlang_u_uid:maislurp-client-erlang_u_uid(),
+       'agentName' => binary(),
+       'agentRole' => binary(),
+       'eventType' := binary(),
+       'status' := binary(),
+       'toolName' => binary(),
+       'inboxId' => maislurp-client-erlang_u_uid:maislurp-client-erlang_u_uid(),
+       'emailId' => maislurp-client-erlang_u_uid:maislurp-client-erlang_u_uid(),
+       'draftId' => maislurp-client-erlang_u_uid:maislurp-client-erlang_u_uid(),
+       'errorMessage' => binary(),
+       'createdAt' := maislurp-client-erlang_date_time:maislurp-client-erlang_date_time(),
+       'conversationId' => maislurp-client-erlang_u_uid:maislurp-client-erlang_u_uid(),
+       'threadId' => maislurp-client-erlang_u_uid:maislurp-client-erlang_u_uid(),
+       'actionName' => binary(),
+       'actionRequestId' => maislurp-client-erlang_u_uid:maislurp-client-erlang_u_uid(),
+       'errorCode' => binary(),
+       'phoneNumberId' => maislurp-client-erlang_u_uid:maislurp-client-erlang_u_uid(),
+       'smsId' => maislurp-client-erlang_u_uid:maislurp-client-erlang_u_uid(),
+       'sentSmsId' => maislurp-client-erlang_u_uid:maislurp-client-erlang_u_uid(),
+       'smsParticipant' => binary()
+     }.
+
+encode(#{ 'id' := Id,
+          'userId' := UserId,
+          'apiKeyEntityId' := ApiKeyEntityId,
+          'agentName' := AgentName,
+          'agentRole' := AgentRole,
+          'eventType' := EventType,
+          'status' := Status,
+          'toolName' := ToolName,
+          'inboxId' := InboxId,
+          'emailId' := EmailId,
+          'draftId' := DraftId,
+          'errorMessage' := ErrorMessage,
+          'createdAt' := CreatedAt,
+          'conversationId' := ConversationId,
+          'threadId' := ThreadId,
+          'actionName' := ActionName,
+          'actionRequestId' := ActionRequestId,
+          'errorCode' := ErrorCode,
+          'phoneNumberId' := PhoneNumberId,
+          'smsId' := SmsId,
+          'sentSmsId' := SentSmsId,
+          'smsParticipant' := SmsParticipant
+        }) ->
+    #{ 'id' => Id,
+       'userId' => UserId,
+       'apiKeyEntityId' => ApiKeyEntityId,
+       'agentName' => AgentName,
+       'agentRole' => AgentRole,
+       'eventType' => EventType,
+       'status' => Status,
+       'toolName' => ToolName,
+       'inboxId' => InboxId,
+       'emailId' => EmailId,
+       'draftId' => DraftId,
+       'errorMessage' => ErrorMessage,
+       'createdAt' => CreatedAt,
+       'conversationId' => ConversationId,
+       'threadId' => ThreadId,
+       'actionName' => ActionName,
+       'actionRequestId' => ActionRequestId,
+       'errorCode' => ErrorCode,
+       'phoneNumberId' => PhoneNumberId,
+       'smsId' => SmsId,
+       'sentSmsId' => SentSmsId,
+       'smsParticipant' => SmsParticipant
+     }.

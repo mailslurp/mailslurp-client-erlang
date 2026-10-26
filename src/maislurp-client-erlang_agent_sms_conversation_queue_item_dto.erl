@@ -1,0 +1,77 @@
+-module(maislurp-client-erlang_agent_sms_conversation_queue_item_dto).
+
+-export([encode/1]).
+
+-export_type([maislurp-client-erlang_agent_sms_conversation_queue_item_dto/0]).
+
+-type maislurp-client-erlang_agent_sms_conversation_queue_item_dto() ::
+    #{ 'conversationId' := maislurp-client-erlang_u_uid:maislurp-client-erlang_u_uid(),
+       'phoneNumberId' := maislurp-client-erlang_u_uid:maislurp-client-erlang_u_uid(),
+       'phoneNumber' => binary(),
+       'otherPhoneNumber' := binary(),
+       'lastBody' => binary(),
+       'latestMessageDirection' := binary(),
+       'latestMessageId' => maislurp-client-erlang_u_uid:maislurp-client-erlang_u_uid(),
+       'latestReceivedSmsId' => maislurp-client-erlang_u_uid:maislurp-client-erlang_u_uid(),
+       'latestSentSmsId' => maislurp-client-erlang_u_uid:maislurp-client-erlang_u_uid(),
+       'messageCount' := integer(),
+       'unreadCount' := integer(),
+       'hasMedia' := boolean(),
+       'createdAt' := maislurp-client-erlang_date_time:maislurp-client-erlang_date_time(),
+       'lastMessageAt' := maislurp-client-erlang_date_time:maislurp-client-erlang_date_time(),
+       'projectedAt' := maislurp-client-erlang_date_time:maislurp-client-erlang_date_time(),
+       'version' := integer(),
+       'workflowState' := binary(),
+       'outcome' => binary(),
+       'reviewStatus' := binary(),
+       'requiresHumanReview' := boolean(),
+       'needsOperationalAttention' := boolean(),
+       'claim' => maislurp-client-erlang_agent_conversation_claim_dto:maislurp-client-erlang_agent_conversation_claim_dto()
+     }.
+
+encode(#{ 'conversationId' := ConversationId,
+          'phoneNumberId' := PhoneNumberId,
+          'phoneNumber' := PhoneNumber,
+          'otherPhoneNumber' := OtherPhoneNumber,
+          'lastBody' := LastBody,
+          'latestMessageDirection' := LatestMessageDirection,
+          'latestMessageId' := LatestMessageId,
+          'latestReceivedSmsId' := LatestReceivedSmsId,
+          'latestSentSmsId' := LatestSentSmsId,
+          'messageCount' := MessageCount,
+          'unreadCount' := UnreadCount,
+          'hasMedia' := HasMedia,
+          'createdAt' := CreatedAt,
+          'lastMessageAt' := LastMessageAt,
+          'projectedAt' := ProjectedAt,
+          'version' := Version,
+          'workflowState' := WorkflowState,
+          'outcome' := Outcome,
+          'reviewStatus' := ReviewStatus,
+          'requiresHumanReview' := RequiresHumanReview,
+          'needsOperationalAttention' := NeedsOperationalAttention,
+          'claim' := Claim
+        }) ->
+    #{ 'conversationId' => ConversationId,
+       'phoneNumberId' => PhoneNumberId,
+       'phoneNumber' => PhoneNumber,
+       'otherPhoneNumber' => OtherPhoneNumber,
+       'lastBody' => LastBody,
+       'latestMessageDirection' => LatestMessageDirection,
+       'latestMessageId' => LatestMessageId,
+       'latestReceivedSmsId' => LatestReceivedSmsId,
+       'latestSentSmsId' => LatestSentSmsId,
+       'messageCount' => MessageCount,
+       'unreadCount' => UnreadCount,
+       'hasMedia' => HasMedia,
+       'createdAt' => CreatedAt,
+       'lastMessageAt' => LastMessageAt,
+       'projectedAt' => ProjectedAt,
+       'version' => Version,
+       'workflowState' => WorkflowState,
+       'outcome' => Outcome,
+       'reviewStatus' => ReviewStatus,
+       'requiresHumanReview' => RequiresHumanReview,
+       'needsOperationalAttention' => NeedsOperationalAttention,
+       'claim' => Claim
+     }.
